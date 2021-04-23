@@ -17,14 +17,6 @@ body {
     line-height: 1.4;
 }
 
-.btn {
-    background: var(---dark);
-    color: var(---light);
-    padding: 0.6rem 1.3rem;
-    text-decoration: none;
-    border: 0;
-}
-
 .wrapper {
     display: grid;
     grid-gap: 20px;
@@ -35,7 +27,7 @@ body {
     grid-gap: 20px;
     padding: 0;
     list-style: none;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .main-nav a {
@@ -59,21 +51,29 @@ body {
     display: grid;
     grid-gap: 20px;
     grid-template-areas:
-        'showcase showcase top-box-a'
-        'showcase showcase top-box-b';
+        'showcase showcase showcase'
+        'showcase showcase showcase'
+        'top-box-a top-box-a top-box-b';
+}
+
+.top-container-contact{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        'top-box-a';
 }
 
 .showcase {
     grid-area: showcase;
     min-height: 400px;
-    background: url(../images/workstation.jpg);
+    background: url(../images/background.jpg);
     background-size: cover;
     background-position: center;
     padding: 3rem;
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: center;
+    /*justify-content: center;*/
     box-shadow: var(---shadow);
 }
 
@@ -98,16 +98,17 @@ body {
     padding: 1.5rem;
 }
 
-.top-box .price {
-    font-size: 2.5rem;
-}
-
 .top-box-a {
     grid-area: top-box-a;
 }
 
 .top-box-b {
     grid-area: top-box-b;
+}
+
+.top-box-b img {
+    max-width: 200px;
+    border-radius: 50%;
 }
 
 .boxes {
@@ -120,26 +121,6 @@ body {
     background: var(--primary);
     text-align: center;
     padding: 1.5rem 2rem;
-    box-shadow: var(---shadow);
-}
-
-.info {
-    background: var(--primary);
-    box-shadow: var(---shadow);
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 3rem;
-}
-
-.portfolio {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.portfolio img {
-    width: 100%;
     box-shadow: var(---shadow);
 }
 
@@ -164,16 +145,6 @@ footer {
 
     .main-nav ul {
         grid-template-columns: 1fr;
-    }
-
-    .info {
-        grid-template-columns: 1fr;
-    }
-
-    .info .btn {
-        display: block;
-        text-align: center;
-        margin: auto;
     }
 }
 
