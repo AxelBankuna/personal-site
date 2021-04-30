@@ -172,8 +172,8 @@ footer {
             'top-box-a';
     }
 
-    .port-pic{
-        max-width: 150px;
+    .no-mobile {
+        display:none;
     }
 }
 
